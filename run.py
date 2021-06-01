@@ -1,4 +1,9 @@
+# START WITH JSON VIDEO  - READING FROM A JSON FILE
+
+
+
 import os
+import json
 from flask import Flask, render_template
 
 
@@ -12,12 +17,15 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    data = []
+    with open("data/hotel.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("about.html", page_title="About", hotel=data)
 
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    return render_template("contact.html", page_title="Contact")
 
 
 @app.route("/careers")

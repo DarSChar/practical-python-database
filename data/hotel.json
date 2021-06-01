@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Name 1",
+    "description": "HERE IS SOME TEXT 1 --  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis accusamus, labore atque mollitia officiis rem illum? Soluta tenetur fugiat alias maxime consequatur consectetur eaque vero ut, odit expedita ipsum delectus.",
+    // "image_source": "{{ url_for('static', filename='assets/img/hero.jpg') }}"
+  },
+  {
+    "name": "Name 2",
+    "description": "HERE IS SOME TEXT 2 --  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis accusamus, labore atque mollitia officiis rem illum? Soluta tenetur fugiat alias maxime consequatur consectetur eaque vero ut, odit expedita ipsum delectus.",
+    // "image_source": "{{ url_for('static', filename='assets/img/about-bg.jpg') }}"
+  }
+]

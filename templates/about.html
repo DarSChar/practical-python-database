@@ -1,4 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>About Page</h1>
+
+{{ hotel }}
+
+    <h1>{{ page_title }}</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis accusamus, labore atque mollitia officiis rem illum? Soluta tenetur fugiat alias maxime consequatur consectetur eaque vero ut, odit expedita ipsum delectus.    
+    </p>
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h3>Header</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat ab distinctio, molestiae tempora error dolor odio amet qui voluptate possimus quae earum aperiam esse cum atque ullam fugit enim.
+			</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='assets/img/hero.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='assets/img/about-bg.jpg') }}" alt="">
+        </div>
+        <div class="col-md-7">
+            <h3>Header</h3>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum veritatis unde cupiditate, quod suscipit laborum voluptatibus modi deleniti laudantium odio maxime tempora in aut? Voluptates incidunt consectetur impedit suscipit veniam.
+			</p>
+        </div>
+    </div>
+
+
 {% endblock %}
