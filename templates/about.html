@@ -1,36 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-{{ hotel }}
+<!-- {{ hotel[0]["name"] }}
+{{ hotel[1]["name"] }} -->
 
     <h1>{{ page_title }}</h1>
     <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis accusamus, labore atque mollitia officiis rem illum? Soluta tenetur fugiat alias maxime consequatur consectetur eaque vero ut, odit expedita ipsum delectus.    
     </p>
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Header</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat ab distinctio, molestiae tempora error dolor odio amet qui voluptate possimus quae earum aperiam esse cum atque ullam fugit enim.
-			</p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='assets/img/hero.jpg') }}" alt="">
-        </div>
-    </div>
+        
+        {% for member in hotel %}
+        <!-- member can be any word -->
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='assets/img/about-bg.jpg') }}" alt="">
-        </div>
-        <div class="col-md-7">
-            <h3>Header</h3>
-			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum veritatis unde cupiditate, quod suscipit laborum voluptatibus modi deleniti laudantium odio maxime tempora in aut? Voluptates incidunt consectetur impedit suscipit veniam.
-			</p>
-        </div>
-    </div>
+        
 
+            <div class="row featurette">
+
+            {% if loop.index % 2 != 0 %}
+
+                <div class="col-md-7">
+                    <h3>{{ loop.index }}. {{ member.name }}</h3>
+                    <p>{{ member.description }}</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+                </div>
+            
+            {% else %}
+
+                <div class="col-md-5">
+                    <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+                </div>
+                <div class="col-md-7">
+                    <h3>{{ loop.index }}. {{ member.name }}</h3>
+                    <p>{{ member.description }}</p>
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        {% if loop.index != loop.length %}
+        <!-- Horiontal ruler -->
+
+            <hr class="featurette-divider">
+
+        {% endif %}
+
+    {% endfor %}
 
 {% endblock %}
