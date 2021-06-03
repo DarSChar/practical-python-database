@@ -1,3 +1,11 @@
 .col-md-5 img {
     width: 100%;
 }
+
+.flashes {
+    color: pink;
+}
+
+.center {
+    text-align: center;
+}
