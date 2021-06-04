@@ -1,2 +1,1 @@
-control c to get out of the other running of an application. 
-Or can go into open ports and click 8080 one. 
+https://mountain-flask-app.herokuapp.com/
