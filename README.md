@@ -1,59 +1,135 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# <div align="center">Flask Framework</div>
 
-Welcome Dario Charles,
+[Live Project Here](https://dariocharles.github.io/js-milestone-project/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This project used the Flask Framework and Startbootstrap template to advertise a hotel in Canmore, AB. It is a three page website that uses a JSON file to retrieve data from to advertise each type of room available. 
 
-## Gitpod Reminders
+![Screenshot](static/assets/images/evermore.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Table of contents
 
-`python3 -m http.server`
+1. [Goals](#goals)
+2. [User Experience](#UX)
+3. [Testing](#testing)
+4. [Deployment](#deployment)
+5. [Credits](#credits)
 
-A blue button should appear to click: _Make Public_,
+## Goals <a name="goals"></a>
 
-Another blue button should appear to click: _Open Browser_.
+### User Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The user's goal is to learn more about the hotel and contact them for bookings. When they come to the website they will find that they can see which rooms are available. 
 
-A blue button should appear to click: _Make Public_,
+### Developer Goals
 
-Another blue button should appear to click: _Open Browser_.
+In this project, I implemented a Startbootstrap template, Python3 language for streamline code, and Flask framework to build the web application. I also deployed the project to Github and Heroku. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+In this web application I showcased my abilities in the following:
 
-To log into the Heroku toolbelt CLI:
+- Flask Framework
+- Bootstrap Template
+- Jinja syntax
+- Python3
+- CSS3
+- HTML5
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## User Experience UX <a name="UX"></a>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+When the user comes to this website, they are greeted with an inviting feel and visually inticing experience. The imagry and design is sleek and relavent to the hotel giving the user a clear understanding of what they are seeking. When they submit the contact form they are provided feedback that their form is submitted and they will be replied to shortly. 
 
-## Updates Since The Instructional Video
+### Design
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Colour Scheme
+  - This website is quite colourful and welcoming. The white background reflects the rich, clean mountain air that the hotel promotes. 
+- Style
+  - The style of the website is professional and information focused. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Technologies Used <a name="technologies"></a>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Languages Used
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- HTML5
+- CSS3
+- Python3
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Frameworks, Libraries & Programs Used
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+1. [Git](https://git-scm.com/)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+2. [GitHub](https://github.com/)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+3. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+4. [Heroku](heroku.com)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
----
+## Testing <a name="testing"></a>
 
-Happy coding!
+### Further Testing
+
+- The Website was tested on Google Chrome, and Micrsoft Edge.
+- The website was viewed on a Laptop device.
+- Used Chrome Dev Tools to test responsiveness.
+- Multiple games were played to ensure that the functions all worked with any interaction the user may use.
+- I used [W3C Markup Validation](https://validator.w3.org/) to validate HTML
+- I used [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) to validate CSS.
+- I used [JSON Lint](jsonlint.com)) to validate the JSON file.
+
+
+## Bugs
+
+- The code had a bug that when the user double-clicked a card the function would see that as a match because the data attribute would match. This would keep the card flipped without matching with a new card. I created a function to resolve this issue so that clicking a second time would not trigger an event. That way it wasn't recognized as a match.
+- A bug in the code was that when a user would click another card before the first card was fully turned over, the function had completed, then the second card would flip over but wouldn't recognize if the data attribute matched the first card or not. I created a function to resolve this issue so that the user couldn't click another card until the first function was completed.
+
+## Deployment <a name="deployment"></a>
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page), locate the "Settings" button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the GitHub Repository
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 3.
+   $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+7. Press Enter. Your local clone will be created.
+   $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+   > Cloning into `CI-Clone`...
+   > remote: Counting objects: 10, done.
+   > remote: Compressing objects: 100% (8/8), done.
+   > remove: Total 10 (delta 1), reused 10 (delta 1)
+   > Unpacking objects: 100% (10/10), done.
+
+## Credits <a name="credits"></a>
+
+### Resources/References
+
+- [The Code Institute](https://codeinstitute.net/)
+
+### Images
+
+- All images were taken from Google images.
+
+### Acknowledgements
+
+- My teacher at Canadian Business College for assisting and encouraging me to build this application. 
+- The Code Institute for providing course material to assist in learning how to implement the contents of this website

@@ -3,9 +3,30 @@
 }
 
 .flashes {
-    color: pink;
+    color:black;
+    background: rgb(169, 192, 169);
+    list-style-type: none;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+    margin-bottom: 30px;
 }
 
 .center {
     text-align: center;
+    margin-bottom:5%;
+}
+
+.img-center {
+    text-align: center;
+}
+
+.center-text {
+    text-align:center;
+    margin-bottom: 60px;
+}
+
+.hiking-town {
+    margin-left: 10%;
+    margin-right: 10%;
 }

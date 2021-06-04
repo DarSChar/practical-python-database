@@ -19,7 +19,7 @@ def about():
     data = []
     with open("data/hotel.json", "r") as json_data:
         data = json.load(json_data)
-    return render_template("about.html", page_title="About", hotel=data)
+    return render_template("about.html", page_title="Rooms to Choose From", hotel=data)
 
 
 @app.route("/about/<member_name>")
@@ -30,7 +30,6 @@ def about_member(member_name):
         for obj in data:
             if obj["url"] == member_name:
                 member = obj
-    # return "<h1>" + member["name"] + "</h1>"
     return render_template("member.html", member=member)
 
 
@@ -39,7 +38,7 @@ def contact():
     if request.method == "POST":
         flash("Thanks {}, we have received your message!".format(
             request.form.get("inputName")))
-    return render_template("contact.html", page_title="Contact")
+    return render_template("contact.html", page_title="We would love to hear from you!")
 
 
 if __name__ == "__main__":

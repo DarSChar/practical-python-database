@@ -1,16 +1,22 @@
-  
 {% extends "base.html" %}
 {% block content %}
 
     <div class="row">
-        <div class="col-md-5">
-            <img class="center" src="{{ member.image_source }}" alt="Profile image for {{ member.name }}">
-            <h2 class="col-md-7 center">{{ member.name }}</h2>
-        </div>
+        <h2 class="center">{{ member.name }}</h2>
     </div>
 
     <div class="col-md-12">
         <p class="center">{{ member.description }}</p>
     </div>
 
+    <div>
+        <div class="img-center">
+            <img src="{{ member.image_source }}" alt="Profile image for {{ member.name }}">
+        </div>
+    </div>
+
+
 {% endblock %}
+
+
+
