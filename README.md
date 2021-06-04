@@ -4,7 +4,7 @@
 
 This project used the Flask Framework and Startbootstrap template to advertise a hotel in Canmore, AB. It is a three page website that uses a JSON file to retrieve data from to advertise each type of room available. 
 
-![Screenshot](static/assets/images/evermore.png)
+![Screenshot](static/assets/img/evermore.png)
 
 # Table of contents
 
